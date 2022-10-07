@@ -1,0 +1,82 @@
+#productMenu{
+    .nameNote{
+        margin-top: 50px;
+        width: 150px;
+        h3 {
+            font-size: 28px;
+            font-family: $Poppins;
+            font-weight: 600;
+            position: relative;
+            padding: 5px 0;
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 70%;
+                height: 4px;
+                top: 100%;
+                left: -20%;
+                background-color: $secondColor;
+                border-radius: 50px;
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 70%;
+                height: 4px;
+                top: 0%;
+                right: -10%;
+                background-color: $secondColor;
+                border-radius: 50px;
+            }
+        }
+    }
+
+    .tabMenu {
+        width: 100%;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.379);
+        padding: 5px 20px 15px 20px;
+
+        ul {
+            li {
+                margin-right: 30px;
+                padding: 4px 20px;
+                cursor: pointer;
+
+                &:hover {
+                    h6 {
+                        color: $secondColor;
+                    }
+                }
+
+                h6 {
+                    font-size: 18px;
+                    font-family: $Hind;
+                    font-weight: 400;
+                    letter-spacing: 1px;
+                    text-align: center;
+                    margin: 0;
+                    color: $textColor;
+                    transition: 0.2s ease-in-out;
+                    
+                }
+            }
+
+            li.is_active {
+                h6 {
+                    color: $secondColor;
+                }
+            }
+        }
+        
+        &.tabOne{
+            margin-top: 80px;
+        }
+        &.tabTwo{
+            margin-top: 30px;
+        }
+    }
+
+    
+}

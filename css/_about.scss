@@ -1,0 +1,70 @@
+#aboutMenu {
+    .nameNote {
+        margin-top: 50px;
+        width: 150px;
+
+        h3 {
+            font-size: 28px;
+            font-family: $Poppins;
+            font-weight: 600;
+            position: relative;
+            padding: 5px 0;
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 75%;
+                height: 4px;
+                top: 100%;
+                left: -20%;
+                background-color: $secondColor;
+                border-radius: 50px;
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 75%;
+                height: 4px;
+                top: 0%;
+                right: -30%;
+                background-color: $secondColor;
+                border-radius: 50px;
+            }
+        }
+
+    }
+
+    .about {
+        margin: 40px 0;
+
+        .about-text{
+            margin-top: 100px;
+
+            h4{
+                font-size: 25px;
+                font-family: $Poppins;
+                font-weight: 600;
+                color: $textColor;
+            }
+            
+            p{
+                font-size: 18px;
+                font-family: $Hind;
+                font-weight: 400;
+                color: $textColor;
+                margin-top: 50px;
+            }
+        }
+
+        .about-image{
+            border-radius: 20px;
+            .photo{
+                margin-top: 40px;
+                border-radius: 20px;
+                min-height: 400px;
+            }
+        }
+    }
+
+}
