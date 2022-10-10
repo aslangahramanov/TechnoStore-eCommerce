@@ -1,0 +1,109 @@
+#userRegister {
+    background-image: url(../photo/login-bg.jpg);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .reg-box {
+        width: 520px;
+        padding: 0px 0;
+        background-color: $firstColor;
+        border-radius: 30px;
+        flex-direction: column;
+        box-shadow: rgba(14, 30, 37, 0.482) 0px 2px 4px 0px, rgba(14, 30, 37, 0.495) 0px 2px 16px 0px;
+
+        .top-content, 
+        .submit-btn, 
+        .btn-register{
+            padding: 0px 40px;
+            text-align: center;
+        }
+
+        .input-area{
+            padding: 0px 40px;
+        }
+
+        .top-content {
+            .logo {
+                width: 140px;
+                margin: 20px auto;
+            }
+
+            .content{
+                h4{
+                    font-size: 16px;
+                    font-family: $Poppins;
+                    font-weight: 600;
+                    color: $secondColor;
+                }
+            }
+        }
+
+        .input-area{
+            input{
+                width: 100%;
+                padding: 10px 20px;
+                margin-top: 20px;
+                border-radius: 8px;
+                outline: none;
+                border: 1px solid rgba(0, 0, 0, 0.289);
+                font-size: 14px;
+
+                &.check{
+                    width: 20px;
+                    height: 14px;
+                    margin: 25px 10px 0 10px;
+                    
+                }
+                
+                
+            }
+            span{
+                font-size: 14px;
+            font-family: $Poppins;
+            font-weight: 500;
+            color: $textColor
+            }
+
+        }
+
+        .submit-btn{
+            margin-top: 40px;
+            a{
+                text-decoration: none;
+                font-size: 18px;
+                font-family: $Poppins;
+                border: 1px solid $secondColor;
+                padding: 8px 30px;
+                border-radius: 30px;
+                background-color: $secondColor;
+                color: $textWhite
+            }
+        }
+
+        .btn-login{
+            margin: 30px auto;
+            
+            span{
+            font-size: 16px;
+            font-family: $Hind;
+
+            a{
+                display:inline-block;
+                text-decoration: none;
+                margin-left: 10px;
+                font-size: 16px;
+                font-family: $Hind;
+                font-weight: 600;
+                color: $secondColor;
+            }
+            }
+        }
+
+    }
+}
