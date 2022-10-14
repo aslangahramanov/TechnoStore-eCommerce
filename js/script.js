@@ -88,4 +88,14 @@ $(document).ready(function () {
 })
 
 
+let cartBtn = document.querySelector('#secHeader .userProg .cart-icon')
+let cartUp = document.querySelector('#secHeader .userProg .cart-up')
+let x_icon = document.querySelector('#secHeader .userProg .cart-up .xmark')
 
+cartBtn.addEventListener('click', () => {
+    cartUp.classList.toggle('cart_active')
+})
+
+x_icon.addEventListener('click', () =>{
+    cartUp.classList.remove('cart_active')
+})
