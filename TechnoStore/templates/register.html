@@ -1,0 +1,65 @@
+{% extends 'layout/_doctype.html' %}
+{% load static %}
+
+
+{% block main %}
+
+
+<div id="userRegister">
+    <div class="reg-box d-flex justify-content-center align items center">
+        <div class="top-content">
+            <a href={% url 'info:default' %}>
+                <div class="logo">
+                    <img class="img-fluid" src={% static 'photo/logo.png' %} alt="">
+                </div>
+            </a>
+            <div class="content">
+                <h4>Qeydiyyatdan Keç</h4>
+            </div>
+        </div>
+        <form action={% url 'user:register' %} method="POST">
+        {% csrf_token %}
+        <div class="input-area">
+            <label for="firstname" class='form-label'></label>
+            <input class="firstname" type="text" placeholder="Ad" name="firstname">
+
+            <label for="name" class='form-label'></label>
+            <input class="surname" type="text" placeholder="Soyad" name="lastname">
+
+            <label for="username" class='form-label'></label>
+            <input class="username" type="text" placeholder="İstifadəçi adı" name="username">
+
+            <label for="email" class='form-label'></label>
+            <input class="email" type="email" placeholder="E-mail" name="email">
+
+            <label for="password" class='form-label'></label>
+            <input class="password" type="password" placeholder="Şifrənizi girin" name="password">
+
+            <label for="repassword" class='form-label'></label>
+            <input class="password" type="password" placeholder="Şifrənizi yenidən girin" name="repassword">
+
+            {% comment %} <label for="check" class='form-label'></label>
+            <input class="check" type="checkbox" > {% endcomment %}
+            {% comment %} <span>Şərtlər və qaydalarla razıyam</span> {% endcomment %}
+        </div>
+        <div class="submit-btn">
+            {% comment %} <a href="#">Qeydiyyat</a> {% endcomment %}
+            <button type="submit">Qeydiyyatdan Kec</button>
+        </div>
+
+
+        </form>
+        <div class="btn-login">
+            <span>Hesabın var?<a href={% url 'user:login' %}>Giriş Et</a></span>
+        </div>
+    </div>
+</div>
+
+
+{% endblock main %}
+
+
+
+
+
+

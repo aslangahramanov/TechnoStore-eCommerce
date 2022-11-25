@@ -1,0 +1,60 @@
+{% extends 'layout/_header.html' %}
+{% load static %}
+
+
+{% block main %}
+
+<main id="aboutMenu">
+    <div class="custom-width">
+        <div class="nameNote">
+            <h3>Haqqımızda</h3>
+        </div>
+        <div class="about">
+            <div class="row justify-content-between">
+                <div class="col-lg-7 about-text">
+                    <h4>TechnoStore Community </h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente itaque illum autem
+                        voluptatibus facilis! Aliquid molestiae non excepturi enim esse! Rem eius iste, hic enim
+                        quibusdam fugiat nesciunt! Voluptatum velit dolorum nisi voluptatem et fugit obcaecati
+                        maiores praesentium! Tempora est eveniet commodi quis autem aliquam similique mollitia
+                        distinctio necessitatibus repudiandae ipsum omnis incidunt ipsa sit, esse suscipit minus
+                        vitae ducimus ad? Ab, fuga in possimus, minima facilis aliquam quibusdam rerum expedita rem
+                        iure nisi atque beatae magnam ducimus cumque libero repudiandae. Eaque rerum, ipsum eius
+                        inventore labore error placeat, ipsa illo corporis ratione ad dicta voluptates? Recusandae
+                        quia soluta cupiditate?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident,
+                        totam vitae nostrum ut minima veritatis laboriosam numquam. Fuga officiis nemo accusamus ut
+                        aliquam ipsa magnam optio est magni earum odit tempora, at totam alias dolore enim cum
+                        ratione quam iusto distinctio soluta quis voluptatum laborum commodi. Reprehenderit aliquid
+                        accusamus deleniti!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nostrum maiores labore,
+                        commodi incidunt ex delectus nobis quibusdam mollitia placeat aliquid vero voluptate
+                        obcaecati, sequi accusamus, deserunt cupiditate voluptatem molestias pariatur? Iste, illo!
+                        Quos voluptatum placeat, delectus quidem corporis neque labore aut doloribus dolorem ut
+                        harum illo quae dolores enim nulla! Eveniet, eum impedit perferendis nulla distinctio sint
+                        dicta rem nostrum odio ut eligendi fuga blanditiis quaerat et reiciendis ullam!</p>
+                </div>
+                <div class="col-lg-4 about-image">
+                    <div class="col-lg-12">
+                        <img class="img-fluid photo" src={% static 'photo/TechnoStoreContact.jpeg' %} alt="">
+                    </div>
+                    <div class="col-lg-12">
+                        <img class="img-fluid photo" src={% static 'photo/TechnoStoreContact2.jpg' %} alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock main %}
+
+
+{% block scripts %}
+    
+<script src={% static 'vendors/js/jquery-3.6.0.min.js' %}></script>
+<script src={% static 'vendors/js/bootstrap.bundle.js' %}></script>
+<script src={% static 'layoutjs/layout.js' %}></script>
+
+{% endblock scripts %}
+ 
+

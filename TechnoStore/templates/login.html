@@ -1,0 +1,42 @@
+{% extends 'layout/_doctype.html' %}
+{% load static %}
+
+
+{% block main %}
+
+
+<div id="userLogin">
+    <div class="log-box d-flex justify-content-center align items center">
+        <div class="top-content">
+           <a href={% url 'info:default' %}>
+            <div class="logo">
+                <img class="img-fluid" src={% static 'photo/logo.png' %} alt="">
+            </div>
+           </a> 
+            <div class="content">
+                <h4>Giriş Et</h4>
+            </div>
+        </div>
+        <form action={% url 'user:login' %} method='POST'>
+            {% csrf_token %}
+            <div class="input-area">
+                <label for="username" class="form-label"></label>
+                <input type="text" placeholder="İstifadəçi adı və ya E-mail girin" name="username">
+                <label for="password"></label>
+                <input type="password" placeholder="Şifrənizi girin" name="password">
+            </div>
+            <div class="submit-btn">
+                {% comment %} <a  href=''>Daxil ol</a> {% endcomment %}
+                <button class='sub-btn' type="submit">Daxil ol</button>
+            </div>
+            <div class="btn-register">
+                <span>Hesabın yoxdur?<a href={% url 'user:register' %}>Qeydiyyatdan Keç</a></span>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+{% endblock main %}
+
+

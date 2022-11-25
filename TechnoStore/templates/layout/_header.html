@@ -1,0 +1,131 @@
+{% load static %}
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techno Store</title>
+    <link rel="stylesheet" href={% static 'vendors/css/bootstrap.css' %}>
+    <link rel="stylesheet" href={% static 'css/style.css' %}>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+
+
+<body>
+
+    <!-- <div class="icons">
+        <img src="photo/cpu-tower.png" alt="">
+    </div>
+ -->
+
+    <!-- ...............HEADER START.................... -->
+
+
+    <header id="firstHeader">
+        <div class="custom-width">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="menubaricon">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="techLogo">
+                    <div class="logo">
+                        <a href={% url 'info:default' %}><img class="img-fluid" src={% static 'photo/logo.png' %} alt=""></a>
+                    </div>
+                </div>
+                <div class="techMenu">
+                    <ul class="list-unstyled d-flex align-items-center m-0 p-0">
+                        <li class="is_active"><a href={% url 'info:home' %}>Ana Səhifə</a></li>
+                        <li><a href={% url 'products:products' %}>Məhsullar</a></li>
+                        <li><a href={% url 'info:about' %}>Haqqımızda</a></li>
+                        <li><a href={% url 'blog:blog' %}>Bloq</a></li>
+                        <li><a href={% url 'info:contact' %}>Əlaqə</a></li>
+                    </ul>
+                </div>
+                <div class="rightmenuicon">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="techRight d-flex align-items-center">
+                    <div class="darkMode">
+                        <i class="fa-solid fa-moon"></i>
+                    </div>
+                    <div class="userLogin">
+                        <a href={% url 'user:login' %}>
+                            Daxil ol
+                        </a>
+                    </div>
+                    <div class="userRegister">
+                        <a href={% url 'user:register' %}>
+                            Qeydiyyat
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="secHeader">
+        <div class="custom-width">
+            <div class="d-flex justify-content-between align-items-center">
+                <div id="category-button" class="category d-flex align-items-center">
+                    <h3>Kateqoriyalar</h3>
+                    <i class="fa-solid fa-bars-progress"></i>
+                </div>
+                <div class="openCategory" class="cat_active">
+                    <ul class="list-unstyled m-0 p-0">
+                        {% for category in categoryes %}
+                            <li><i class="fa-solid fa-laptop"></i><a href="#">{{category.name}}</a></li>
+                        
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="searchNav">
+                    <input placeholder="Məhsul Axtar" class="searchInput" type="search">
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                </div>
+                <div class="userProg">
+                    <ul class="d-flex align-items-center list-unstyled">
+                        <li class="shop-cart"><i class="cart-icon fa-solid fa-cart-shopping"></i><a href="#"></a></li>
+                        <div class="cart-up">
+                            <i class="triangel fa-solid fa-play"></i>
+                            <i class="xmark fa-solid fa-xmark"></i>
+                            <p>Sizin səbətiniz boşdur</p>
+                        </div>
+                        <li class="wishlist"><i class="fa-solid fa-heart"></i><a href="#"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ...............HEADER END.................... -->
+
+
+    {% block main %}{% endblock main %}
+
+
+    <!-- ...............FOOTER START.................... -->
+
+    <div id="footer">
+        <div class="custom-width">
+            <div class="content">
+                <div class="top_content">
+                    <img src={% static 'photo/logo.png' %} alt="">
+                </div>
+                <div class="bottom_content">
+                    <span>TechnoStore 2022. All Copyright Reserved</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ...............FOOTER END.................... -->
+
+</body>
+
+
+{% block scripts %}{% endblock scripts %}
